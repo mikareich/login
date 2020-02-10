@@ -1,0 +1,120 @@
+html,
+body {
+  background-color: #52668b;
+  font-family: "Roboto Slab", serif;
+}
+
+.loginContainer {
+  margin: 20px auto 0px auto;
+  height: 500px;
+  width: 80vw;
+  max-width: 800px;
+  min-width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px #00000036;
+  background-color: white;
+  display: flex;
+  > * {
+    width: 50%;
+    height: 100%;
+  }
+  > .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    >.header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      >.app{
+        display: flex;
+        align-items: center;
+        >img{
+          border-radius: 500px;
+        }
+      }
+    }
+    > .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > .inputContainer {
+        width: 200px;
+        position: relative;
+        height: 28px;
+        margin-bottom: 20px;
+        > input {
+          border: 2px solid black;
+          border-radius: 5px;
+          font-size: 11pt;
+          color: black;
+          font-family: unset;
+          outline: none;
+          padding: 4px 5px;
+          position: absolute;
+          height: 20px;
+          transition: border-color 200ms;
+          &::placeholder {
+            color: white;
+          }
+          &:focus{
+              border-color: #22649b;
+          }
+          &:focus,
+          &:not(:placeholder-shown) {
+            ~ label {
+              top: -15px;
+            }
+          }
+        }
+        > label {
+          position: absolute;
+          top: 4px;
+          left: 5px;
+          transition: top 200ms;
+          background-color: white;
+        }
+      }
+      >button{
+          border: none;
+          background-color: #22649b;
+          color: white;
+          font-size: 11pt;
+          font-family: unset;
+          width: 50%;
+          padding: 5px 10px;
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px #00000049;
+          outline: none;
+          transition: box-shadow, background-color, 200ms;
+          &:active{
+              box-shadow: none;
+              background-color: #4f7a9e;
+          }
+      }
+    }
+  }
+  > .description {
+    background-image: url("../assets/background.jpg");
+    background-size: cover;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    justify-content: flex-end;
+    > .info {
+      width: 50%;
+      height: 200px;
+      overflow: hidden;
+    }
+  }
+}
+
+@media only screen and (max-width: 620px){
+  .loginContainer>.login{
+    width: 100%;
+  }
+  .loginContainer>.description{
+    display: none;
+  }
+}

@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="loginContainer">
+        <div class="login">
+            <div class="header">
+                <div class="app">
+                    <img src="./assets/clock_2x.png" width="50" alt="app icon">
+                    <span class="appName">Timetable</span>
+                </div>
+                <h1>Login</h1>
+            </div>
+            <form class="main">
+                <div class="inputContainer">
+                    <input id="email" type="email" required placeholder="Email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="inputContainer">
+                    <input id="password" type="password" required placeholder="password">
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="rememberContainer">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Keep me logged in</label>
+                </div>
+                <button type="submit">Log in</button>
+            </form>
+
+            <hr>
+            <div class="singUp">
+                Don't have an account? <a href="#">Sign up</a>
+            </div>
+        </div>
+        <div class="description">
+            <div class="info">
+                <h3 class="appName">Timetable</h3>
+                <span class="appDescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsa
+                    iure laborum.</span>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
